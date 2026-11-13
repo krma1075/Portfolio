@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>VR Escape Room - Mara Kraeft</title>
+ 
+    <!-- Reihenfolge wichtig: erst die Basis, dann die Projektseiten -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+<main class="case">
+ 
+    <!-- Zurück-Leiste -->
+    <div class="case-bar">
+        <a href="index.html#projects"><span>←</span>Zurück</a>
+        <span class="case-id">MK / 02</span>
+    </div>
+ 
+ 
+    <!-- Hero -->
+    <div class="case-hero">
+ 
+        <div class="case-hero-top">
+            <p class="case-kicker">Modul: AR/VR Gaming<br>2025</p>
+            <p class="case-lead">
+                Ein VR-Escape-Room in Unity: In einem verlassenen Raumschiff
+                müssen Spieler Hinweise entdecken, Objekte manipulieren und
+                Rätsel lösen, um aus dem Schiff zu entkommen.
+            </p>
+        </div>
+ 
+        <h1 class="case-title">Escape<br>Room</h1>
+ 
+        <div class="case-media case-hero-image" style="margin-top: clamp(60px, 7vw, 120px);">
+            <video controls playsinline preload="metadata" poster="project2pics/project2-00-1.png">
+                <source src="project2pics/EscapeRoom.mp4" type="video/mp4">
+                Dein Browser unterstützt dieses Video nicht.
+            </video>
+        </div>
+ 
+    </div>
+ 
+ 
+    <!-- 01 Ausgangslage -->
+    <div class="case-block">
+ 
+        <div class="case-head">
+            <p class="case-label">01 / Ausgangslage</p>
+ 
+            <div class="case-body">
+                <h2 class="case-headline">Wie entkommt man aus einem verlassenen Raumschiff?</h2>
+                <p>
+                    Ziel des Projekts war die Entwicklung eines kurzen, spannenden
+                    Escape-Room-Erlebnisses für die Meta Quest 2. Die Spieler
+                    befinden sich in einem verlassenen Raumschiff und müssen
+                    ihre Umgebung aufmerksam untersuchen, um einen Weg nach
+                    draußen zu finden.
+                </p>
+                <p>
+                    Zu Beginn steht man in einem Korridor vor einer verschlossenen
+                    Tür. Hinweise an den Wänden führen durch die Mission. Durch das
+                    Entdecken von Hinweisen und das Interagieren mit Gegenständen
+                    öffnet sich nach und nach der Weg in den nächsten Raum.
+                </p>
+            </div>
+        </div>
+ 
+        <div class="case-duo">
+            <figure>
+                <div class="case-media">
+                    <img src="project2pics/project2-01-1.png" alt="Korridor mit großer Tür" onerror="this.style.display='none'">
+                </div>
+                <figcaption class="case-caption"><b>01.1</b><span>Startpunkt / Korridor mit der großen Tür</span></figcaption>
+            </figure>
+ 
+            <figure>
+                <div class="case-media">
+                    <img src="project2pics/project2-01-2.png" alt="Hinweis an der Wand" onerror="this.style.display='none'">
+                </div>
+                <figcaption class="case-caption"><b>01.2</b><span>Spielerführung / Hinweis an der Wand</span></figcaption>
+            </figure>
+        </div>
+ 
+    </div>
+ 
+ 
+    <!-- 02 Ansatz (bordeaux Hintergrund) -->
+<div class="case-block case-block-wine" style="--wine: #1b2433; margin: 0 var(--pad); padding-left: 5.51%; padding-right: 5.51%;">
+ 
+        <div class="case-head">
+            <p class="case-label">02 / Verlauf</p>
+            <h2 class="case-headline">Ein kurzer Raum, in dem jede Interaktion funktionieren muss.</h2>
+        </div>
+ 
+        <div class="case-steps">
+            <div class="case-step">
+                <span class="case-step-nr"></span>
+                <h3>Ideenfindung</h3>
+                <p>Ich wollte etwas Immersives für VR entwickeln. Ein Escape-Room passte dafür gut, weil die Spieler selbst denken, suchen und ausprobieren müssen. Als Setting habe ich mich für ein verlassenes Raumschiff entschieden. Mein Fokus lag auf Spielerführung und Interaktion.</p>
+            </div>
+            <div class="case-step">
+                <span class="case-step-nr"></span>
+                <h3>Entwicklung</h3>
+                <p>Ich habe darauf geachtet, dass alles mit den VR-Controllern funktioniert: Bewegung, Greifen und Interaktion mit den Objekten. Außerdem habe ich die Funktion der Tür programmiert, die sich öffnet, wenn das richtige Objekt auf dem roten Kreis liegt. Die Hinweise habe ich so platziert, dass man intuitiv durch den Raum geführt wird.</p>
+            </div>
+            <div class="case-step">
+                <span class="case-step-nr"></span>
+                <h3>Testen</h3>
+                <p>Ich habe jede Änderung direkt in der VR-Brille getestet, denn nur dort sieht man, ob Greifen, Wege und Hinweise wirklich funktionieren. Daraus ergaben sich Anpassungen bei der Platzierung der Hinweise und bei der Reaktionszeit der Tür.</p>
+            </div>
+        </div>
+ 
+ 
+    </div>
+ 
+ 
+    <!-- 03 Wirkung -->
+    <div class="case-block">
+ 
+        <div class="case-head">
+            <p class="case-label">03 / Ergebnis</p>
+ 
+            <blockquote class="case-quote">
+                <p>„Das Objekt zu greifen war die größte Hürde, und der Moment, in dem sich die Tür öffnet, der beste.“</p>
+            </blockquote>
+        </div>
+ 
+        <div class="case-body">
+            <p>
+                Das Ergebnis ist ein kompletter Mini-Escape-Room: Metallische Texturen,
+                eine Skybox mit Weltraum vor den Fenstern und durchgehende Space-Musik
+                erzeugen die Atmosphäre eines verlassenen Raumschiffs. Wer das passende
+                Objekt findet und auf den roten Kreis legt, öffnet die große Tür.
+                Dieser Moment, in dem Greifen, Rätsel und Tür zusammenspielen, war für mich
+                das Highlight der Entwicklung. Zum Schluss erscheint die Nachricht
+                „Du hast es geschafft!“ und eine Leiter markiert das Entkommen.
+            </p>
+        </div>
+ 
+        <div class="case-result">
+            <figure>
+                <div class="case-media">
+                    <img src="project2pics/project2-03-1.png" alt="Roter Kreis an der Tür" onerror="this.style.display='none'">
+                </div>
+                <figcaption class="case-caption"><b>03.1</b><span>Rätsel / Roter Kreis an der Tür</span></figcaption>
+            </figure>
+ 
+            <figure>
+                <div class="case-media">
+                    <img src="project2pics/project2-03-2.png" alt="Abschlussraum mit Leiter" onerror="this.style.display='none'">
+                </div>
+                <figcaption class="case-caption"><b>03.2</b><span>Ziel / Abschlussraum mit Leiter</span></figcaption>
+            </figure>
+        </div>
+ 
+        <div class="case-body">
+            <p>
+                Quellen: Raumschiff-Modell von CGTrader, Metalltexturen „Yughues Free Metal Materials“
+                aus dem Unity Asset Store, Musik „Kinetic“ von Revo (Uppbeat).
+            </p>
+        </div>
+ 
+    </div>
+ 
+ 
+    <!-- Ende -->
+    <div class="case-end">
+        <p class="case-label">Ende / 04</p>
+ 
+        <div class="case-end-row">
+            <p class="case-end-title">Zurück zum Archiv.</p>
+            <a class="case-end-link" href="index.html#projects">Alle Projekte ansehen →</a>
+        </div>
+    </div>
+ 
+</main>
+ 
+</body>
+ 
+</html>

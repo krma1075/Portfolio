@@ -1,0 +1,530 @@
+/* ==========================================================
+   PROJEKTSEITEN (project1.html, project2.html, project3.html)
+   Wird NACH style.css geladen. Nutzt dessen Reset, Hintergrund
+   und Manrope. Alles hier ist über Klassen mit "case-" gebaut,
+   damit nichts mit der Startseite kollidiert.
+   ========================================================== */
+
+:root {
+    --pad: 6.3%;                 /* seitlicher Abstand der Inhalte */
+    --cream: #fff;            /* Überschriften */
+    --text: #9a9285;             /* Fließtext */
+    --label: #fff;            /* kleine Labels, Nummern, Linien-Akzent */
+    --line: #4a3436;             /* feine Linien (Meta-Tabelle) */
+    --wine: #381f20;             /* Hintergrund Abschnitt "Ansatz" */
+    --media-bg: #1c1a16;         /* Platzhalterfläche, falls ein Bild fehlt */
+}
+
+.case {
+    overflow-x: hidden;
+}
+
+
+/* ========== ZURÜCK-LEISTE ========== */
+
+.case-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 55px;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.case-bar a {
+    color: #8a8377;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.case-bar a:hover {
+    color: var(--cream);
+}
+
+.case-bar a span {
+    margin-right: 10px;
+}
+
+.case-bar .case-id {
+    color: var(--label);
+}
+
+
+/* ========== HERO ========== */
+
+.case-hero {
+    padding: clamp(180px, 20vw, 330px) var(--pad) 0;
+}
+
+.case-hero-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.case-kicker {
+    color: var(--cream);
+    font-size: 18px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 1.8;
+}
+
+.case-lead {
+    max-width: 640px;
+    color: var(--text);
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.case-title {
+    margin-top: clamp(60px, 7vw, 120px);
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: clamp(56px, 10vw, 190px);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    color: var(--cream);
+}
+
+.case-title .dot {
+    width: 0.1em;
+    height: 0.1em;
+    margin-left: 0.03em;
+    background: #7F2834;
+}
+
+
+/* ========== META-TABELLE ========== */
+
+.case-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: clamp(60px, 7vw, 110px);
+    border: 1px solid var(--line);
+}
+
+.case-meta div {
+    padding: 48px;
+    border-left: 1px solid var(--line);
+}
+
+.case-meta div:first-child {
+    border-left: none;
+}
+
+.case-meta dt {
+    color: #8a8377;
+    font-size: 15px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.case-meta dd {
+    color: var(--cream);
+    font-size: 26px;
+    font-weight: 300;
+}
+
+/* ========== LINK ZUM AUSPROBIEREN ========== */
+
+.case-play {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+}
+
+.case-play-note {
+    color: #8a8377;
+    font-size: 16px;
+}
+
+.case-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 38px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.case-cta span {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.case-cta:hover {
+    color: #FFEDCA;
+    border-color: #FFEDCA;
+}
+
+.case-cta:hover span {
+    transform: translateX(6px);
+}
+
+.case-cta:focus-visible {
+    outline: 2px solid #FFEDCA;
+    outline-offset: 4px;
+}
+
+/* ========== BILDER (gemeinsam) ========== */
+
+.case-media {
+    position: relative;
+    background: var(--media-bg);
+    overflow: hidden;
+}
+
+.case-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.case-caption {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.case-caption b {
+    flex: none;
+    font-weight: 400;
+    color: var(--label);
+}
+
+.case-hero-image {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.case-hero-image video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========== ABSCHNITTE ========== */
+
+.case-block {
+    padding: clamp(100px, 12vw, 190px) var(--pad);
+}
+
+.case-block-wine {
+    background: var(--wine);
+}
+
+.case-head {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: 40px;
+}
+
+.case-label {
+    color: var(--label);
+    font-size: 16px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding-top: 18px;
+}
+
+.case-headline {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: clamp(34px, 4.4vw, 76px);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    color: var(--cream);
+}
+
+.case-body p {
+    max-width: 800px;
+    margin-top: 48px;
+    color: var(--text);
+    font-size: 21px;
+    line-height: 1.9;
+}
+
+.case-body .case-headline + p {
+    margin-top: 64px;
+}
+
+
+/* ---------- Abschnitt 01: zwei Bilder, rechts nach unten versetzt ---------- */
+
+.case-duo {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 32px;
+    margin-top: clamp(80px, 9vw, 150px);
+    align-items: start;
+}
+
+.case-duo figure:last-child {
+    margin-top: clamp(80px, 10vw, 190px);
+}
+
+.case-duo figure:first-child .case-media {
+    aspect-ratio: 3 / 2;
+}
+
+.case-duo figure:last-child .case-media {
+    aspect-ratio: 4 / 5;
+}
+
+
+/* ---------- Abschnitt 02: drei Schritte + drei versetzte Bilder ---------- */
+
+.case-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: clamp(80px, 8vw, 130px);
+}
+
+.case-step {
+    padding: 0 56px;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.case-step:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+
+.case-step-nr {
+    color: var(--label);
+    font-size: 17px;
+    letter-spacing: 0.1em;
+}
+
+.case-step h3 {
+    margin-top: 80px;
+    font-weight: 300;
+    font-size: clamp(28px, 2.6vw, 42px);
+    letter-spacing: -0.02em;
+    color: var(--cream);
+}
+
+.case-step p {
+    margin-top: 32px;
+    color: var(--text);
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+.case-trio {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(60px, 7vw, 110px);
+    margin-top: clamp(80px, 9vw, 140px);
+}
+
+/* Bilder in Originalformat, nichts wird abgeschnitten */
+.case-trio .case-media {
+    background: none;
+}
+
+.case-trio .case-media img {
+    position: static;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+}
+
+.case-trio figure {
+    width: 80%;
+}
+
+.case-trio figure:nth-child(2) {
+    align-self: flex-end;
+}
+
+
+/* ---------- Abschnitt 03: Zitat + zwei versetzte Bilder ---------- */
+
+.case-quote {
+    padding-left: 56px;
+    border-left: 1px solid var(--label);
+}
+
+.case-quote p {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: clamp(30px, 3.6vw, 62px);
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+}
+
+.case-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: clamp(80px, 9vw, 140px);
+    align-items: start;
+}
+
+.case-result .case-media {
+    aspect-ratio: 4 / 3;
+}
+
+.case-result figure:last-child {
+    margin-top: clamp(80px, 10vw, 190px);
+}
+
+
+/* ========== ENDE ========== */
+
+.case-end {
+    padding: clamp(100px, 12vw, 190px) var(--pad);
+    border-top: 1px solid var(--line);
+}
+
+.case-end-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.case-end-title {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: clamp(44px, 7vw, 120px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--cream);
+}
+
+.case-end-link {
+    flex: none;
+    padding-bottom: 12px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 22px;
+    border-bottom: 1px solid var(--label);
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.case-end-link:hover {
+    color: #fff;
+    border-color: var(--cream);
+}
+
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 900px) {
+
+    .case-bar {
+        padding: 28px 20px;
+        font-size: 12px;
+    }
+
+    .case-hero-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .case-meta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .case-meta div {
+        padding: 28px 24px;
+    }
+
+    .case-meta div:nth-child(3) {
+        border-left: none;
+    }
+
+    .case-meta div:nth-child(n+3) {
+        border-top: 1px solid var(--line);
+    }
+
+    .case-head {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .case-label {
+        padding-top: 0;
+    }
+
+    .case-body p {
+        font-size: 18px;
+    }
+
+    .case-duo,
+    .case-result {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+        .case-trio figure {
+        width: 100%;
+    }
+
+    .case-duo figure:last-child,
+    .case-result figure:last-child {
+        margin-top: 0;
+    }
+
+    .case-trio {
+        gap: 48px;
+    }
+
+    .case-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .case-step,
+    .case-step:first-child {
+        padding: 40px 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .case-step h3 {
+        margin-top: 32px;
+    }
+
+    .case-quote {
+        padding-left: 24px;
+    }
+
+    .case-caption {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .case-end-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+}
